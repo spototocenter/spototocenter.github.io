@@ -15,14 +15,13 @@
 # in the templates via {{ site.myvariable }}.
 title: 스포츠 데이터 센터
 description: >- # this means to ignore newlines until "author:"
-  Welcome to my awesome blog..
-author: mgongkang
+author: sponomics88
 author_avatar: assets/avatar.png
-email: mgongkang@gmail.com
+email: sponomics88@gmail.com
 baseurl: "/" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 # twitter_username: rmsubekti
-github_username:  mgongkang
+github_username:  sponomics88
 # disqus_shortname: rmsubekti
 
 google_analytics: UA-124XXXXX-XX
@@ -31,9 +30,9 @@ cse_id : 010xxxxxxx00xxxxxxxx:v_uiprmpwme
 
 logo: /assets/icons/512.png
 social:
-  name: Mgongkang
+  name: Sponomics88
   links:
-    - https://github.com/mgongkang
+    - https://sponomics88.github.io
 
 sass:
     style: compressed
