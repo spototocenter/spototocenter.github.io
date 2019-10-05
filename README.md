@@ -1,52 +1,61 @@
-# jekyll-theme-nangka
+# Kiko Now
 
-Welcome to your new Jekyll theme! In this directory, you'll find the files you need to be able to package up your theme into a gem. Put your layouts in `_layouts`, your includes in `_includes`, your sass files in `_sass` and any other assets in `assets`.
+*Read this in other languages: [English](README.md), [한국어](README.ko.md).*
 
-To experiment with this code, add some sample content and run `bundle exec jekyll serve` – this directory is setup just like a Jekyll site!
+**Jekyll** is a static site generator that's perfect for GitHub hosted blogs ([Jekyll Repository](https://github.com/jekyll/jekyll))
 
-TODO: Delete this and the text above, and describe your gem
+**Kiko Now** is a Jekyll theme based on **[Jekyll Now](https://github.com/barryclark/jekyll-now)**, following the philosophy of **Jekyll Now**, which makes it easier to create your Jekyll blog, by eliminating a lot of the up front setup.
 
+![Kiko Now Theme Screenshot](/images/kiko-now-theme-screenshot.png "Kiko Now Theme Screenshot")
 
-## Installation
+## Quick Start
 
-Add this line to your Jekyll site's `Gemfile`:
+### Step 1) Fork Jekyll Now to your User Repository
 
-```ruby
-gem "jekyll-theme-nangka"
+Fork this repo, then rename the repository to yourgithubusername.github.io.
+
+Your Jekyll blog will often be viewable immediately at <https://yourgithubusername.github.io> (if it's not, you can often force it to build by completing step 2)
+
+### Step 2) Customize and view your site
+
+Enter your site name, description, avatar and many other options by editing the _config.yml file. You can easily turn on Google Analytics tracking, Disqus commenting and social icons here too.
+
+Making a change to _config.yml (or any file in your repository) will force GitHub Pages to rebuild your site with jekyll. Your rebuilt site will be viewable a few seconds later at <https://yourgithubusername.github.io> - if not, give it ten minutes as GitHub suggests and it'll appear soon
+
+There are 3 different ways that you can make changes to your blog's files:
+
+1. Edit files within your new username.github.io repository in the browser at GitHub.com (shown below).
+2. Use a third party GitHub content editor, like [Prose by Development Seed](http://prose.io). It's optimized for use with Jekyll making markdown editing, writing drafts, and uploading images really easy.
+3. Clone down your repository and make updates locally, then push them to your GitHub repository.
+
+![_config.yml](/images/config.png "_config.yml")
+
+### Step 3) Publish your first blog post
+
+Edit `/_posts/2017-10-08-hello-world.md` to publish your first blog post. This [Markdown Cheatsheet](http://www.jekyllnow.com/Markdown-Style-Guide/) might come in handy.
+
+![First Post](/images/post-screenshot.png "First Post")
+
+You can add additional posts in the browser on GitHub.com too! Just hit the + icon in `/_posts/` to create new content. Just make sure to include the [front-matter](http://jekyllrb.com/docs/frontmatter/) block at the top of each new blog post and make sure the post's filename is in this format: year-month-day-title.md
+
+#### Frontmatter
+```
+---
+layout: post
+title: "post title"
+tags: [tag1, tag2, tag3]
+comments: true
+---
 ```
 
-And add this line to your Jekyll site's `_config.yml`:
+## Local Development
 
-```yaml
-theme: jekyll-theme-nangka
-```
+1. Install Jekyll and plug-ins in one fell swoop. `gem install github-pages` This mirrors the plug-ins used by GitHub Pages on your local machine including Jekyll, Sass, etc.
+2. Clone down your fork `git clone https://github.com/yourusername/yourusername.github.io.git`
+3. Serve the site and watch for markup/sass changes `jekyll serve`
+4. View your website at http://127.0.0.1:4000/
+5. Commit any changes and push everything to the master branch of your GitHub user repository. GitHub Pages will then rebuild and serve your website.
 
-And then execute:
+## Questions?
 
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install jekyll-theme-nangka
-
-## Usage
-
-TODO: Write usage instructions here. Describe your available layouts, includes, sass and/or assets.
-
-## Contributing
-
-Bug reports and pull requests are welcome on GitHub at https://github.com/rmsubekti/nangka. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
-
-## Development
-
-To set up your environment to develop this theme, run `bundle install`.
-
-Your theme is setup just like a normal Jekyll site! To test your theme, run `bundle exec jekyll serve` and open your browser at `http://localhost:4000`. This starts a Jekyll server using your theme. Add pages, documents, data, etc. like normal to test your theme's contents. As you make modifications to your theme and to your content, your site will regenerate and you should see the changes in the browser after a refresh, just like normal.
-
-When your theme is released, only the files in `_layouts`, `_includes`, `_sass` and `assets` tracked with Git will be bundled.
-To add a custom directory to your theme-gem, please edit the regexp in `jekyll-theme-nangka.gemspec` accordingly.
-
-## License
-
-The theme is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
-
+[Open an Issue](https://github.com/aweekj/kiko-now/issues/new) and let's chat!
