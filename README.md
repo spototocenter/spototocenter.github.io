@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Kiko Now
 
 *Read this in other languages: [English](README.md), [한국어](README.ko.md).*
@@ -59,3 +60,6 @@ comments: true
 ## Questions?
 
 [Open an Issue](https://github.com/aweekj/kiko-now/issues/new) and let's chat!
+=======
+# spototocenter.github.io
+>>>>>>> 2164c347a5db686d5cf18ee4fae2b37ce79439a3
