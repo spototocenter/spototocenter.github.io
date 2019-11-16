@@ -119,6 +119,26 @@ sns.factorplot(x="sex", y="total_bill", hue="smoker", col="time", data=tips, kin
 plt.show()
 ```
 
+1. 상자그림 작성하기 : 가로 방향
+![boxplot](/images/note/boxplot_1.png)
 
+2. 상자그림 작성하기 : 세로 방향
+![boxplot](/images/note/boxplot_2.png)
 
+3. 집단별 상자그림 작성하기 : 일변량 질적 자료
+![boxplot](/images/note/boxplot_3.png)
 
+4. 집단별 상자그림 작성하기 : 이변량 질적 자료
+![boxplot](/images/note/boxplot_4.png)
+
+5. 집단별 상자그림 작성하기 : 색깔 변경하기
+![boxplot](/images/note/boxplot_5_1.png)
+![boxplot](/images/note/boxplot_5_2.png)
+![boxplot](/images/note/boxplot_5_3.png)
+![boxplot](/images/note/boxplot_5_4.png)
+
+6. swarmplot 추가하기
+![boxplot](/images/note/boxplot_6.png)
+
+7. factorplot 추가하기
+![boxplot](/images/note/boxplot_7.png)
