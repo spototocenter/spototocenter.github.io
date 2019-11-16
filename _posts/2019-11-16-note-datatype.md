@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  데이터의 종류
+title:  Data type
 date:   2019-11-16 09:00:00 +0900
 categories: Note
 ---
