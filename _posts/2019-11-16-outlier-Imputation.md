@@ -64,3 +64,61 @@ describe(x)
 outlier = (Q1) - (1.5 * IQR), (3Q) + (1.5 * IQR) 
 ```
 
+### boxplot 
+
+```python 
+# 패키지 불러오기
+
+import matplotlib.pyplot as plt
+%matplotlib inline
+import seaborn as sns
+import numpy as np
+
+# 화면 스타일 설정하기
+sns.set_style("whitegrid")
+
+# 파이썬에서 제공하는 데이터 불러오기
+tips = sns.load_dataset("tips")
+
+# 1. 상자그림 작성하기 : 가로 방향
+sns.boxplot(x = "total_bill",  data = tips)
+plt.show()
+
+# 2. 상자그림 작성하기 : 세로 방향
+sns.boxplot(x = "total_bill", orient = "v", data = tips)
+plt.show()
+
+# 3. 집단별 상자그림 작성하기 : 일변량 질적 자료
+sns.boxplot(x = "day", y = "total_bill", data = tips)
+plt.show()
+
+# 4. 집단별 상자그림 작성하기 : 이변량 질적 자료
+sns.boxplot(x = "day", y = "total_bill",  hue = "smoker", data = tips)
+plt.show()
+
+# 5. 집단별 상자그림 작성하기 : 색깔 변경하기
+sns.boxplot(x = "day", y = "total_bill",  hue = "smoker", palette = "Set3", data = tips)
+plt.show()
+
+sns.boxplot(x = "day", y = "total_bill",  hue = "smoker", palette = "muted", data = tips)
+plt.show()
+
+sns.boxplot(x = "day", y = "total_bill",  hue = "smoker", palette = "RdBu", data = tips)
+plt.show()
+
+sns.boxplot(x = "day", y = "total_bill",  hue = "smoker", palette = "Blues_d", data = tips)
+plt.show()
+
+# 6. swarmplot 추가하기
+sns.boxplot(x="day", y="total_bill", data=tips)
+sns.swarmplot(x="day", y="total_bill", data=tips, color=".25")
+plt.show()
+
+# 7. factorplot 추가하기
+sns.factorplot(x="sex", y="total_bill", hue="smoker", col="time", data=tips, kind="box", size=4, aspect=0.7)
+plt.show()
+```
+
+
+
+
