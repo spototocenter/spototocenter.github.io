@@ -30,7 +30,7 @@ df.describe()
 ```
 
 
-### outlier 
+### Outlier 
 
 Box-Plot을 이용해서 이상치를 제거한다.<br>
 여러 방법이 있지만, 사분위수를 이용해서 제거하는 방법을 사용한다.<br>
