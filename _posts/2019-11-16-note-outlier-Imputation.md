@@ -64,7 +64,7 @@ describe(x)
 outlier = (Q1) - (1.5 * IQR), (3Q) + (1.5 * IQR) 
 ```
 
-### boxplot 
+### Boxplot 
 
 ```python 
 # 패키지 불러오기
@@ -143,7 +143,7 @@ plt.show()
 7. factorplot 추가하기
 ![boxplot](/images/note/boxplot_7.png)
 
-### imputation
+### Imputation
 
 가장 쉬운 결측치 처리 방법은 Null이 포함 행을 모두 제거하는 것입니다. <br>
 샘플 수가 많은 경우 이 방법을 사용하는 것이 가능합니다. <br>
@@ -162,3 +162,6 @@ from sklearn.preprocessing import Imputer
 imp = Imputer(missing_values = 'NaN', strategy='most_frequent', axis=0)
 df['X'] = imp.fit_transform(df['X']) 
 ```
+
+### Transformation
+
