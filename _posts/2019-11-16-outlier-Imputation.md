@@ -49,4 +49,18 @@ Q3 - Q1의 값이다.<br>
 
 이상치를 구하기 위해서는 결국 수염을 이용하게 되는데, 이때 보통 1.5를 IQR에 곱한것으로 구한 수염을 이용한다.<br>
 
+```python 
+# use numpy 
+np.percentile(x, 0)  # 최소값
+np.percentile(x, 25)  # 1사분위 수
+np.percentile(x, 50)  # 2사분위 수
+np.percentile(x, 75)  # 3사분위 수
+np.percentile(x, 100)  # 최대값
+
+# use scipy 
+from scipy.stats import describe
+describe(x)
+
+outlier = (Q1) - (1.5 * IQR), (3Q) + (1.5 * IQR) 
+```
 
