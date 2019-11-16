@@ -50,7 +50,3 @@ Q3 - Q1의 값이다.<br>
 이상치를 구하기 위해서는 결국 수염을 이용하게 되는데, 이때 보통 1.5를 IQR에 곱한것으로 구한 수염을 이용한다.<br>
 
 
-
-출처: https://goodtogreate.tistory.com/entry/이상치-제거-Boxplot-해석을-통한 [GOOD to GREAT]
-
-
