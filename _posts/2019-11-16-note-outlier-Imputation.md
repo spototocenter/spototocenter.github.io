@@ -164,4 +164,20 @@ df['X'] = imp.fit_transform(df['X'])
 ```
 
 ### Transformation
+대부분의 통계 분석 방법이 정규성 가정을 기반으로 하므로 완벽하지 않더라도 최대한 정규분포로 변환하는 노력이 필요합니다. <br>
+만약 변환 이후에도 정규 가정을 충족 못한다면, wilcox.test 등 비모수 검정 방법을 사용하는 것이 바람직합니다. <br>
+예를 들어, 일반적인 로그 데이터와 같이 0(zero) 수치가 매우 많은 경우, 또는 극단적인 positive skewed 분포를 보이거나 분포의 편중이 심할 경우, log, sqrt, box-cox 등의 방식으로 분포 변환이 가능합니다. <br>
+위 방법 외에도 분포의 특성에 따라 제곱, 자연로그, 지수 등 다양한 함수가 사용될 수 있다. 예제 코드는 아래와 같습니다.<br>
 
+```python
+import math
+from scipy.stats import boxcox
+from sklearn import preprocessing
+ 
+df['X_boxcox'] = preprocessing.scale(boxcox(df['X']+1)[0]) # box-cox(여러 k 값중 가장 작은 SSE 선택)
+df['X_scale'] = preprocessing.scale(df['X']) # 평균이 0, 분산을 0으로 선형변환
+df['X_robust_scale'] = preprocessing.robust_scale(df['X']) # median, interquartile range 사용(outlier 영향 최소화)
+df['X_minmax_scale'] = preprocessing.MinMaxScaler(df['X'] # 최대값 최소값 이용 0-1 range로 변환
+df['X_log'] = preprocessing.scale(np.log(df['X']+1)) # 로그
+df['X_sqrt'] = preprocessing.scale(np.sqrt(df['X']+1)) # 제곱근
+```
