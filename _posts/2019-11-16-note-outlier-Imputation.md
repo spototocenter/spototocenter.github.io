@@ -142,3 +142,23 @@ plt.show()
 
 7. factorplot 추가하기
 ![boxplot](/images/note/boxplot_7.png)
+
+### imputation
+
+가장 쉬운 결측치 처리 방법은 Null이 포함 행을 모두 제거하는 것입니다. <br>
+샘플 수가 많은 경우 이 방법을 사용하는 것이 가능합니다. <br>
+만약 샘플수가 충분하지 않을 경우, Pandas의 fillna() 명령어로 Null 값을 채울 수 있습니다. <br>
+일반적으로 연속형인 경우 Mean이나 Median을 이용하고 명목형인 경우 Mode(최빈치)나 예측 모형을 통해 Null 값을 대체할 수 있습니다.<br> 
+
+```python 
+# 결측치가 하나도 없는 Case만 선택하는 코드 예제
+df[df.isnull().any(axis=1)]
+ 
+# Null 값을 median으로 대체하는 코드 예제
+df.fillna(df.med())
+ 
+# Scikit-learn Imputation을 이용하여 명목변수의 Null 값을 Mode로 대체한 예제
+from sklearn.preprocessing import Imputer
+imp = Imputer(missing_values = 'NaN', strategy='most_frequent', axis=0)
+df['X'] = imp.fit_transform(df['X']) 
+```
