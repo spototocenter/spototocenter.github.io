@@ -33,5 +33,5 @@ categories: Note
 
 
 #### 데이터 분류 기준표 
-![data_type](/images/note/data_type_1.jpg)
+![data_type](/images/note/data_type_1.png)
 
