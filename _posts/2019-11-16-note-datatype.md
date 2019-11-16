@@ -11,8 +11,8 @@ categories: Note
 #### 1. Categorical(Qualitative) 
 종류 <br> 
 - Nominal <br>
-  : Variables with no inherent order or ranking sequence(명목자료) <br>
-  : 셀 수 있을 뿐 순서를 매길순 없다. <br>
+  - Variables with no inherent order or ranking sequence(명목자료) <br>
+  - 셀 수 있을 뿐 순서를 매길순 없다. <br>
   e.g. (청팀/홍팀/백팀)<br>
 - Ordinal: Variables with an ordered series(순서가 있는 명목자료) <br>
   e.g. (설문-5.매우 높다/4.높다/3.중립/2.낮다/1.매우 낮다) <br>
@@ -28,7 +28,7 @@ categories: Note
 - interval data(구간 자료) <br>
   e.g. (시간) <br>
 - ratio data(비율 자료) <br> 
-  : 절대적 원점(meaningful zero point)이 존재하는 데이터 <br>
+  - 절대적 원점(meaningful zero point)이 존재하는 데이터 <br>
   e.g. (키, 몸무게, 돈) <br> 
 
 
